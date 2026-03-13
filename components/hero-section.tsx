@@ -1,0 +1,59 @@
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, ChevronDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { AnimatedWord } from "@/components/animated-word"
+
+export function HeroSection() {
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  return (
+    <div className="flex min-w-0 flex-col gap-8 px-6 py-23 sm:px-12 sm:py-32">
+      {/* Profile image */}
+      <div className="relative size-24 shrink-0 overflow-hidden rounded-full sm:size-28">
+        <Image
+          src="/home/profile.jpeg"
+          alt="Morgan Doane"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Main heading and CTAs */}
+      <div className="flex flex-col gap-4">
+        <h1 className="text-2xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+          <span className="block sm:inline">I&apos;m Morgan Doane, a</span>
+          <span className="block whitespace-nowrap sm:inline sm:whitespace-normal">
+            <AnimatedWord /> who{" "}
+            <br className="hidden sm:block" />
+            builds products from 0-1.
+          </span>
+        </h1>
+
+        {/* CTA buttons */}
+      <div className="flex flex-wrap gap-3">
+        <Button
+          variant="default"
+          size="lg"
+          onClick={scrollToProjects}
+          className="gap-2"
+        >
+          Portfolio
+          <ChevronDown className="size-4" />
+        </Button>
+        <Button variant="outline" size="lg" asChild className="gap-2">
+          <Link href="/contact">
+            Contact
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+      </div>
+      </div>
+    </div>
+  )
+}
