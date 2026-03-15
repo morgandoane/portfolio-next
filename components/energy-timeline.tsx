@@ -56,7 +56,7 @@ export function EnergyTimeline({ steps }: EnergyTimelineProps) {
                 )}
               >
                 <div className="overflow-hidden">
-                  <p className="pb-4 text-sm leading-loose text-muted-foreground">
+                  <p className="pb-4 text-base leading-loose text-muted-foreground">
                     {step.description}
                   </p>
                 </div>

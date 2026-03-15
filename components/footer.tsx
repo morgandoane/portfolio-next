@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 border-x border-border px-6 py-6 sm:px-12">
         <nav
-          className="flex flex-wrap items-center gap-6 text-sm"
+          className="flex flex-wrap items-center gap-6 text-base"
           aria-label="Social links"
         >
           <a
@@ -44,7 +44,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "text-sm text-muted-foreground",
+              "text-base text-muted-foreground",
               "transition-colors hover:text-foreground"
             )}
           >

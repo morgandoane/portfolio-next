@@ -49,9 +49,9 @@ export const projects: Project[] = [
     title: "Korus",
     description:
       "Korus transforms mountains of student feedback into clear, evidence-backed insights your faculty can act on.",
-    category: "Research",
-    image: "/energy/energy-hero.png",
-    tags: ["Research"],
+    category: "Product",
+    image: "/korus/korus-hero.svg",
+    tags: ["0→1", "Product", "Full-stack", "Design"],
   },
   {
     slug: "coldform",
@@ -61,6 +61,15 @@ export const projects: Project[] = [
     category: "Manufacturing",
     image: "/energy/energy-hero.png",
     tags: ["Manufacturing", "Hardware"],
+  },
+  {
+    slug: "conveyors",
+    title: "Conveyor Systems",
+    description:
+      "Industrial conveyor systems: modular design, design automation, and in-house manufacturing at Little Dutch Boy Bakeries.",
+    category: "Manufacturing",
+    image: "/conveyors/cookies.webp",
+    tags: ["Manufacturing", "Hardware", "Software", "Automation"],
   },
 ]
 

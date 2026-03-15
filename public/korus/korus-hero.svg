@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="648" viewBox="0 0 1152 648">
+  <rect width="1152" height="648" fill="#1a1a1a"/>
+  <rect x="48" y="48" width="1056" height="120" rx="8" fill="#2a2a2a"/>
+  <rect x="48" y="192" width="512" height="200" rx="8" fill="#2a2a2a"/>
+  <rect x="592" y="192" width="512" height="200" rx="8" fill="#2a2a2a"/>
+  <rect x="48" y="416" width="1056" height="200" rx="8" fill="#2a2a2a"/>
+  <text x="576" y="115" font-family="system-ui,sans-serif" font-size="24" fill="#888" text-anchor="middle">Korus  Student Feedback Intelligence</text>
+  <text x="304" y="292" font-family="system-ui,sans-serif" font-size="14" fill="#666" text-anchor="middle">Topic Discovery</text>
+  <text x="848" y="292" font-family="system-ui,sans-serif" font-size="14" fill="#666" text-anchor="middle">Sentiment Trends</text>
+  <text x="576" y="516" font-family="system-ui,sans-serif" font-size="14" fill="#666" text-anchor="middle">Narrative Insights</text>
+</svg>

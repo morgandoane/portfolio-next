@@ -7,13 +7,13 @@ export default function ContactPage() {
         <div className="flex min-w-0 flex-col gap-4 px-6 py-8 sm:px-8">
           <Link
             href="/"
-            className="text-sm text-muted-foreground hover:text-foreground"
+            className="text-base text-muted-foreground hover:text-foreground"
           >
             ← Back
           </Link>
           <h1 className="text-2xl font-semibold">Contact</h1>
           <p className="text-muted-foreground">
-            Get in touch — I&apos;d love to hear from you.
+            Get in touch. I&apos;d love to hear from you.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # Agent Guidelines for portfolio-next
 
-Guidance for AI coding agents working on this project. **Read the relevant docs before coding** — official documentation is the source of truth; training data may be outdated.
+Guidance for AI coding agents working on this project. **Read the relevant docs before coding.** Official documentation is the source of truth; training data may be outdated.
 
 ---
 
@@ -9,8 +9,8 @@ Guidance for AI coding agents working on this project. **Read the relevant docs 
 **Docs:** https://nextjs.org/docs (App Router) | **LLM index:** https://nextjs.org/docs/llms.txt
 
 - **Always consult the docs** for routing, data fetching, Server/Client Components, caching, and API changes. Next.js evolves quickly.
-- **App Router only** — this project uses the App Router (`app/` directory), not Pages Router.
-- **Server Components by default** — use `"use client"` only when needed (interactivity, hooks, browser APIs).
+- **App Router only.** This project uses the App Router (`app/` directory), not Pages Router.
+- **Server Components by default.** Use `"use client"` only when needed (interactivity, hooks, browser APIs).
 - **File conventions:** `page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `route.ts`.
 - **Navigation:** Use `next/link` for links; `useRouter`, `usePathname`, `useSearchParams` for programmatic navigation.
 - **Data:** Prefer async Server Components and Server Actions over client-side fetching when possible.
@@ -22,8 +22,8 @@ Guidance for AI coding agents working on this project. **Read the relevant docs 
 
 **Docs:** https://tailwindcss.com/docs
 
-- **Tailwind v4** — uses `@tailwindcss/postcss` and `@import "tailwindcss"` in CSS (no `tailwind.config.js`).
-- **Theme tokens** — design tokens live in `app/globals.css` via CSS variables (`:root`, `.dark`).
+- **Tailwind v4.** Uses `@tailwindcss/postcss` and `@import "tailwindcss"` in CSS (no `tailwind.config.js`).
+- **Theme tokens.** Design tokens live in `app/globals.css` via CSS variables (`:root`, `.dark`).
 - **Custom theme:** `@theme inline` in globals.css maps variables (e.g. `--color-background`, `--radius-lg`).
 - **Dark mode:** Uses `@custom-variant dark (&:is(.dark *))`; theme toggled via `next-themes` and `.dark` class on `html`.
 
@@ -33,14 +33,14 @@ Guidance for AI coding agents working on this project. **Read the relevant docs 
 
 **Docs:** https://ui.shadcn.com/docs | **LLM index:** https://ui.shadcn.com/llms.txt
 
-- **Not a traditional library** — components are copied into the project. Edit them directly; don’t wrap or override from outside.
+- **Not a traditional library.** Components are copied into the project. Edit them directly; don’t wrap or override from outside.
 - **Style:** `radix-nova` (from `components.json`).
 - **Paths:**
   - Components: `@/components` (UI: `@/components/ui`)
-  - Utils: `@/lib/utils` — use `cn()` for class merging
+  - Utils: `@/lib/utils` - use `cn()` for class merging
   - Hooks: `@/hooks`
 - **Icons:** `lucide-react` (configured in `components.json`).
-- **Adding components:** Use `npx shadcn@latest add <component>` — it respects `components.json`.
+- **Adding components:** Use `npx shadcn@latest add <component>`. It respects `components.json`.
 - **Forms:** Supports React Hook Form and TanStack Form; see https://ui.shadcn.com/docs/forms.
 - **Dark mode:** Uses `next-themes`; see https://ui.shadcn.com/docs/dark-mode/next.
 
