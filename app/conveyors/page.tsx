@@ -1,6 +1,9 @@
+import { getProjectMetadata } from "@/lib/projects"
 import { ConveyorsContent } from "@/components/project/conveyors-content"
 import { ProjectHeader } from "@/components/project/project-header"
 import { ProjectHero } from "@/components/project/project-hero"
+
+export const metadata = getProjectMetadata("conveyors")
 
 export default function ConveyorsPage() {
   return (

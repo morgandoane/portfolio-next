@@ -56,7 +56,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "text-center text-base text-muted-foreground break-all sm:text-left",
+              "text-center text-base break-all text-muted-foreground sm:text-left",
               "transition-colors hover:text-foreground"
             )}
           >

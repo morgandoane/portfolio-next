@@ -1,6 +1,9 @@
+import { getProjectMetadata } from "@/lib/projects"
 import { GChairContent } from "@/components/project/gchair-content"
 import { ProjectHeader } from "@/components/project/project-header"
 import { ProjectHero } from "@/components/project/project-hero"
+
+export const metadata = getProjectMetadata("gchair")
 
 export default function GChairPage() {
   return (

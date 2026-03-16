@@ -1,6 +1,9 @@
+import { getProjectMetadata } from "@/lib/projects"
 import { KorusContent } from "@/components/project/korus-content"
 import { ProjectHeader } from "@/components/project/project-header"
 import { ProjectHero } from "@/components/project/project-hero"
+
+export const metadata = getProjectMetadata("korus")
 
 export default function KorusPage() {
   return (

@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 
@@ -5,6 +6,27 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Footer } from "@/components/footer"
 import { cn } from "@/lib/utils"
+
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://morgandoane.com"
+  ),
+  title: {
+    default: "Morgan Doane",
+    template: "%s | Morgan Doane",
+  },
+  description:
+    "Design engineer building at the intersection of software, hardware, and data.",
+  authors: [{ name: "Morgan Doane" }],
+  openGraph: {
+    siteName: "Morgan Doane",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+}
 
 const satoshi = localFont({
   src: "../fonts/Satoshi-Variable.woff2",

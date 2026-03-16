@@ -1,6 +1,9 @@
+import { getProjectMetadata } from "@/lib/projects"
 import { EnergyMapContent } from "@/components/project/energymap-content"
 import { ProjectHeader } from "@/components/project/project-header"
 import { ProjectHero } from "@/components/project/project-hero"
+
+export const metadata = getProjectMetadata("energymap")
 
 export default function EnergyMapPage() {
   return (

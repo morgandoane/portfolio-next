@@ -118,6 +118,10 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='7' fill='rgba(0,0,0,0.65)'/%3E%3C/svg%3E") 10 10, auto;
+    }
+  :is(.dark *), .dark {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='7' fill='rgba(255,255,255,0.65)'/%3E%3C/svg%3E") 10 10, auto;
     }
   body {
     @apply bg-background text-foreground;

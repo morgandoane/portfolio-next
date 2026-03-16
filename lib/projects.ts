@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+
 export interface Project {
   slug: string
   title: string
@@ -9,13 +11,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "deployablesolar",
-    title: "Deployable Solar",
+    slug: "korus",
+    title: "Korus",
     description:
-      "Portable solar solutions for rapid deployment in remote or off-grid environments.",
-    category: "Energy",
-    image: "/energy/energy-hero.png",
-    tags: ["Energy", "Hardware"],
+      "Korus transforms mountains of student feedback into clear, evidence-backed insights your faculty can act on.",
+    category: "Product",
+    image: "/korus/mobile-insight-detail.png",
+    tags: ["Product", "Full Stack", "Software", "Design", "Data"],
   },
   {
     slug: "energymap",
@@ -24,7 +26,7 @@ export const projects: Project[] = [
       "Interactive map of the US energy grid: power plants, transmission, and regional energy mix.",
     category: "Data",
     image: "/energy/energy-hero.png",
-    tags: ["Data", "Energy", "Full-stack"],
+    tags: ["Data", "Energy", "Full Stack", "Software"],
   },
   {
     slug: "cryogenicprinter",
@@ -35,31 +37,22 @@ export const projects: Project[] = [
     tags: ["Hardware", "Research"],
   },
   {
-    slug: "korus",
-    title: "Korus",
-    description:
-      "Korus transforms mountains of student feedback into clear, evidence-backed insights your faculty can act on.",
-    category: "Product",
-    image: "/korus/mobile-insight-detail.png",
-    tags: ["0→1", "Product", "Full-stack", "Design"],
-  },
-  {
-    slug: "coldform",
-    title: "Cold Form",
-    description:
-      "Manufacturing and hardware for cold forming processes and tooling.",
-    category: "Manufacturing",
-    image: "/energy/energy-hero.png",
-    tags: ["Manufacturing", "Hardware"],
-  },
-  {
     slug: "conveyors",
     title: "Conveyor Systems",
     description:
       "Industrial conveyor systems: modular design, design automation, and in-house manufacturing at Little Dutch Boy Bakeries.",
     category: "Manufacturing",
     image: "/conveyors/cookies.webp",
-    tags: ["Manufacturing", "Hardware", "Software", "Automation"],
+    tags: ["Hardware", "Software", "Design"],
+  },
+  {
+    slug: "coldform",
+    title: "ColdForm",
+    description:
+      "A cooling vest that keeps roofers safe using compressed air, vortex tubes, and phase change materials already available on the job site.",
+    category: "Hardware",
+    image: "/coldform/xray.png",
+    tags: ["Hardware", "Product", "Design", "Research"],
   },
   {
     slug: "gchair",
@@ -68,9 +61,25 @@ export const projects: Project[] = [
       "Personal project: a wooden armchair designed and built from scratch.",
     category: "Personal",
     image: "/gchair/hero.jpg",
-    tags: ["Solidworks", "Woodworking", "Sewing"],
+    tags: ["Design"],
   },
 ]
+
+export function getProjectMetadata(slug: string): Metadata {
+  const project = projects.find((p) => p.slug === slug)
+  if (!project) return {}
+  const params = new URLSearchParams({
+    title: project.title,
+    description: project.description ?? "",
+  })
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      images: [`/api/og?${params.toString()}`],
+    },
+  }
+}
 
 /** All unique tags across projects, sorted alphabetically */
 export function getAllTags(): string[] {

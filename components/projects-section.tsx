@@ -65,7 +65,7 @@ function FilterChip({ label, active, onClick }: FilterChipProps) {
       type="button"
       onClick={onClick}
       className={cn(
-        "rounded-full px-3 py-1.5 text-xs font-medium transition-colors",
+        "rounded-full px-3 py-1.5 text-xs font-medium transition-all duration-200 ease-out hover:scale-105 active:scale-95",
         active
           ? "bg-primary text-primary-foreground"
           : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground"
