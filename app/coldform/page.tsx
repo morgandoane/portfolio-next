@@ -11,7 +11,7 @@ export default function ColdFormPage() {
       <div className="mx-auto max-w-6xl border-x border-border">
         <ProjectHeader title="ColdForm" dateRange="2024" />
         <ProjectHero
-          headline="Keeping roofers cool with the tools already on the roof."
+          headline="Keeping roofers cool with the tools already on the jobsite."
           imageAspect="aspect-square"
           meta={[
             {
@@ -20,8 +20,7 @@ export default function ColdFormPage() {
             },
             {
               label: "Role",
-              value:
-                "Pattern Design, Sewing, Ultrasonic Welding",
+              value: "Pattern Design, Sewing, Ultrasonic Welding",
             },
             {
               label: "Toolkit",

@@ -157,7 +157,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         disabled={formState === "submitting"}
-        className="w-full sm:w-auto sm:self-start"
+        className="w-full"
       >
         {formState === "submitting" ? (
           <>

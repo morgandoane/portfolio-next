@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { EnergyTimeline } from "@/components/energy-timeline"
+import { AccordionImageSection } from "@/components/accordion-image-section"
 import { ProjectSection } from "./project-section"
 import { ProjectTextImageSection } from "./project-text-image-section"
 import { ProjectKeyTakeaways } from "./project-key-takeaways"
@@ -52,7 +52,7 @@ export function EnergyMapContent() {
             complexity into a legible medium, making enormous, critical systems
             comprehensible for stakeholders and end-users.
           </h3>
-          <EnergyTimeline
+          <AccordionImageSection
             steps={[
               {
                 title: "Extraction",
@@ -105,14 +105,14 @@ export function EnergyMapContent() {
           }
         >
           <p>
-            Once I had obtained a better understanding of this system for myself,
-            I set out to build tools that would help others come to share this
-            understanding, specifically within the scope of the United States.
-            The tool offers insight into the energy mix of a given area. Users
-            can search for a location, then isolate particular energy production
-            methods. Vertical extrusions encode plant capacity (height =
-            megawatts); color encodes energy type. The vasculature represents
-            electricity flow from plants into the grid.
+            Once I had obtained a better understanding of this system for
+            myself, I set out to build tools that would help others come to
+            share this understanding, specifically within the scope of the
+            United States. The tool offers insight into the energy mix of a
+            given area. Users can search for a location, then isolate particular
+            energy production methods. Vertical extrusions encode plant capacity
+            (height = megawatts); color encodes energy type. The vasculature
+            represents electricity flow from plants into the grid.
           </p>
           <p>
             I sourced the data that powers the application from the{" "}
@@ -124,10 +124,10 @@ export function EnergyMapContent() {
             >
               US Energy Information Administration
             </a>
-            . I was conscious of the inherent subjectivity of data visualization:
-            designers and developers choose what to omit, emphasize, and
-            minimize. I aimed to represent EIA data in an unbiased, objective
-            manner.
+            . I was conscious of the inherent subjectivity of data
+            visualization: designers and developers choose what to omit,
+            emphasize, and minimize. I aimed to represent EIA data in an
+            unbiased, objective manner.
           </p>
         </ProjectTextImageSection>
       </ProjectSection>

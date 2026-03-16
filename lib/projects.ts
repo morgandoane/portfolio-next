@@ -49,7 +49,7 @@ export const projects: Project[] = [
     slug: "coldform",
     title: "ColdForm",
     description:
-      "A cooling vest that keeps roofers safe using compressed air, vortex tubes, and phase change materials already available on the job site.",
+      "A cooling vest that keeps roofers safe using compressed air and phase-change cooling, recharged with tools already on the job site.",
     category: "Hardware",
     image: "/coldform/xray.png",
     tags: ["Hardware", "Product", "Design", "Research"],

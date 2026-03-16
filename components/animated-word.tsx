@@ -2,29 +2,59 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
-const WORDS = ["human", "prototyper", "designer", "engineer"]
+const WORDS = [
+  "human",
+  "maker",
+  "designer",
+  "engineer",
+  "builder",
+  "generalist",
+  "collaborator",
+  "prototyper",
+]
 
 const COLORS = [
   "text-blue-600 dark:text-blue-400",
+  "text-amber-600 dark:text-amber-400",
   "text-violet-600 dark:text-violet-400",
-  "text-emerald-600 dark:text-emerald-400",
-  "text-teal-600 dark:text-teal-400",
+  "text-cyan-600 dark:text-cyan-400",
   "text-rose-600 dark:text-rose-400",
+  "text-emerald-600 dark:text-emerald-400",
+  "text-fuchsia-600 dark:text-fuchsia-400",
+  "text-orange-600 dark:text-orange-400",
 ]
 
 const INTERVAL = 3000 as const
 
-export function AnimatedWord() {
+interface AnimatedWordProps {
+  cycleTrigger?: number
+}
+
+export function AnimatedWord({ cycleTrigger = 0 }: AnimatedWordProps) {
   const [index, setIndex] = useState(0)
   const [width, setWidth] = useState<number | null>(null)
   const measureRef = useRef<HTMLSpanElement>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(null)
 
-  useEffect(() => {
-    const id = setInterval(() => {
+  const resetInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
       setIndex((i) => (i + 1) % WORDS.length)
     }, INTERVAL)
-    return () => clearInterval(id)
+  }
+
+  useEffect(() => {
+    resetInterval()
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
   }, [])
+
+  useEffect(() => {
+    if (cycleTrigger === 0) return
+    setIndex((i) => (i + 1) % WORDS.length)
+    resetInterval()
+  }, [cycleTrigger])
 
   useLayoutEffect(() => {
     if (measureRef.current) {

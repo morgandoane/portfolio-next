@@ -14,24 +14,26 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-svh">
-      <div className="mx-auto min-h-svh max-w-5xl border-x border-border">
-        <div className="flex min-w-0 flex-col gap-8 px-6 py-8 sm:px-8">
-          <div className="flex flex-col gap-4">
+    <div className="flex flex-1 flex-col">
+      <div className="mx-auto flex w-full flex-1 flex-col max-w-6xl border-x border-border">
+        <div className="flex min-w-0 flex-col items-center gap-10 px-6 py-16 sm:px-12 sm:py-24">
+          <div className="flex w-full max-w-lg flex-col items-center gap-4 text-center">
             <Link
               href="/"
-              className="text-base text-muted-foreground transition-colors hover:text-foreground"
+              className="self-start text-base text-muted-foreground transition-colors hover:text-foreground"
             >
               &larr; Back
             </Link>
-            <h1 className="text-2xl font-semibold">Contact</h1>
-            <p className="max-w-lg text-muted-foreground">
+            <h1 className="text-3xl font-semibold tracking-tight">
+              Get in touch
+            </h1>
+            <p className="text-muted-foreground">
               Have a question or want to work together? Send me a message and
               I&apos;ll get back to you as soon as I can.
             </p>
           </div>
 
-          <div className="max-w-lg">
+          <div className="w-full max-w-lg">
             <ContactForm />
           </div>
         </div>

@@ -54,7 +54,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <ThemeProvider>
           <div className="flex min-h-svh flex-col">
-            <div className="flex-1">{children}</div>
+            <div className="flex flex-1 flex-col">{children}</div>
             <Footer />
           </div>
         </ThemeProvider>

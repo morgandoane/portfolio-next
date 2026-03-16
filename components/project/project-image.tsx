@@ -20,7 +20,7 @@ export function ProjectImage({
       fill
       className={className}
       sizes={sizes}
-      unoptimized={src.endsWith(".svg")}
+      unoptimized={src.endsWith(".svg") || src.endsWith(".gif")}
     />
   )
 }

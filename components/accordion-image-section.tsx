@@ -1,27 +1,28 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ProjectImage } from "@/components/project/project-image"
 
-export type TimelineStep = {
+export type AccordionStep = {
   title: string
   description: string
   imageSrc: string
   imageAlt: string
+  imageClassName?: string
+  imageContainerClassName?: string
 }
 
-type EnergyTimelineProps = {
-  steps: TimelineStep[]
+type AccordionImageSectionProps = {
+  steps: AccordionStep[]
 }
 
-export function EnergyTimeline({ steps }: EnergyTimelineProps) {
+export function AccordionImageSection({ steps }: AccordionImageSectionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(0)
 
   return (
     <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
-      {/* Left: clickable labels + dropdown content */}
       <div className="min-w-0 flex-1 space-y-1 md:basis-0">
         {steps.map((step, index) => {
           const isActive = activeIndex === index
@@ -66,17 +67,25 @@ export function EnergyTimeline({ steps }: EnergyTimelineProps) {
         })}
       </div>
 
-      {/* Right: image for active step */}
       <div className="relative aspect-square w-full min-w-0 overflow-hidden bg-accent md:sticky md:top-32 md:flex-1 md:basis-0">
         {activeIndex !== null ? (
-          <Image
-            src={steps[activeIndex].imageSrc}
-            alt={steps[activeIndex].imageAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 448px"
-            unoptimized
-          />
+          <div
+            className={cn(
+              "relative h-full",
+              steps[activeIndex]?.imageContainerClassName ??
+                "w-full"
+            )}
+          >
+            <ProjectImage
+              src={steps[activeIndex].imageSrc}
+              alt={steps[activeIndex].imageAlt}
+              className={cn(
+                "object-cover",
+                steps[activeIndex].imageClassName
+              )}
+              sizes="(max-width: 768px) 100vw, 448px"
+            />
+          </div>
         ) : (
           <div className="flex size-full items-center justify-center text-sm text-muted-foreground">
             Select a topic
