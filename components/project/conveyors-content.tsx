@@ -11,7 +11,7 @@ const IMG = {
   code: "/conveyors/radial-variations-code.png",
   driveSection: "/conveyors/drive-iso.png",
   radialFabrication: "/conveyors/radial-variations.png",
-  whole: "/conveyors/whole-iso-3.png",
+  whole: "/conveyors/whole-iso-4.png",
   weld: "/conveyors/radial-weld.png",
 } as const
 
