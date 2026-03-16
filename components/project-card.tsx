@@ -22,7 +22,7 @@ export function ProjectCard({
     <Link
       href={`/${project.slug}`}
       className={cn(
-        "group relative flex min-h-[420px] flex-col justify-between overflow-hidden rounded-xl p-6 transition-transform hover:scale-[1.02]",
+        "group relative flex min-h-[420px] flex-col justify-between overflow-hidden rounded-xl bg-accent p-6 transition-transform hover:scale-[1.02] dark:bg-card",
         "animate-in duration-500 fill-mode-both fade-in slide-in-from-bottom-4",
         className
       )}

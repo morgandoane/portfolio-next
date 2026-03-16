@@ -17,7 +17,7 @@ export default function KorusPage() {
             {
               label: "Toolkit",
               value:
-                "TypeScript, React, NestJS, Tailwind, MongoDB, Python (embeddings, dimensionality reduction, clustering)",
+                "TypeScript, React, NestJS, Tailwind, MongoDB, Python (Embeddings, Dimensionality Reduction, Clustering)",
             },
             {
               label: "Date",

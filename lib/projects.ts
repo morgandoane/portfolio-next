@@ -29,20 +29,10 @@ export const projects: Project[] = [
   {
     slug: "cryogenicprinter",
     title: "Cryogenic Printer",
-    description:
-      "Hardware research into printing and fabrication at cryogenic temperatures.",
+    description: "A bespoke 3D ice printer for temporary ice structures.",
     category: "Hardware",
-    image: "/energy/energy-hero.png",
+    image: "/printer/printer-full-01.png",
     tags: ["Hardware", "Research"],
-  },
-  {
-    slug: "designautomation",
-    title: "Design Automation",
-    description:
-      "Software tools that automate design workflows and reduce manual iteration.",
-    category: "Software",
-    image: "/energy/energy-hero.png",
-    tags: ["Software", "Automation"],
   },
   {
     slug: "korus",
@@ -50,7 +40,7 @@ export const projects: Project[] = [
     description:
       "Korus transforms mountains of student feedback into clear, evidence-backed insights your faculty can act on.",
     category: "Product",
-    image: "/korus/korus-hero.svg",
+    image: "/korus/mobile-insight-detail.png",
     tags: ["0→1", "Product", "Full-stack", "Design"],
   },
   {

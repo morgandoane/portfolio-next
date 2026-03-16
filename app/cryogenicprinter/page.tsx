@@ -1,15 +1,43 @@
-import Link from "next/link"
+import { CryogenicPrinterContent } from "@/components/project/cryogenicprinter-content"
+import { ProjectHeader } from "@/components/project/project-header"
+import { ProjectHero } from "@/components/project/project-hero"
 
 export default function CryogenicPrinterPage() {
   return (
-    <div className="flex min-h-svh flex-col gap-6 p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-base leading-loose">
-        <h1 className="font-medium">Cryogenic Printer</h1>
-        <p className="text-muted-foreground">Project page coming soon.</p>
-        <Link href="/" className="text-primary underline underline-offset-4 hover:no-underline">
-          ← Back home
-        </Link>
+    <div className="min-h-svh">
+      <div className="mx-auto max-w-6xl border-x border-border">
+        <ProjectHeader title="Cryogenic Printer" dateRange="2025" />
+        <ProjectHero
+          headline="Printing ice in three dimensions."
+          meta={[
+            {
+              label: "Scope",
+              value: "Hardware, Research",
+            },
+            {
+              label: "Role",
+              value: "Mechanical Design, Solidworks, Fabrication",
+            },
+            {
+              label: "Toolkit",
+              value: "Solidworks, Rhino, Grasshopper, Delta Firmware, Marlin, Peltier Modules",
+            },
+            {
+              label: "Team",
+              value: "Team of 3",
+            },
+            {
+              label: "Date",
+              value: "2025",
+            },
+          ]}
+          heroImage={{
+            src: "/printer/printer-full-01.png",
+            alt: "Cryogenic 3D ice printer",
+          }}
+        />
       </div>
+      <CryogenicPrinterContent />
     </div>
   )
 }

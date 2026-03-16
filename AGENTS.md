@@ -49,6 +49,7 @@ Guidance for AI coding agents working on this project. **Read the relevant docs 
 ## Project Conventions
 
 - **Path alias:** `@/` → project root (e.g. `@/components`, `@/lib/utils`).
+- **No em dashes.** Do not use em dashes (—) anywhere. Use parentheses, commas, or hyphens instead.
 - **Class merging:** Use `cn()` from `@/lib/utils` (clsx + tailwind-merge).
 - **Fonts:** `next/font/google` (Geist, Geist_Mono) with CSS variables.
 - **Theme provider:** `ThemeProvider` from `@/components/theme-provider` wraps the app.
@@ -57,10 +58,10 @@ Guidance for AI coding agents working on this project. **Read the relevant docs 
 
 ## Quick Reference
 
-| Concern        | Where to look / use                          |
-|----------------|----------------------------------------------|
-| Next.js API    | https://nextjs.org/docs/app/api-reference    |
-| Routing        | https://nextjs.org/docs/app/getting-started/layouts-and-pages |
-| Server/Client  | https://nextjs.org/docs/app/getting-started/server-and-client-components |
-| shadcn component | https://ui.shadcn.com/docs/components/radix/[component] |
-| Tailwind v4    | https://tailwindcss.com/docs                 |
+| Concern          | Where to look / use                                                      |
+| ---------------- | ------------------------------------------------------------------------ |
+| Next.js API      | https://nextjs.org/docs/app/api-reference                                |
+| Routing          | https://nextjs.org/docs/app/getting-started/layouts-and-pages            |
+| Server/Client    | https://nextjs.org/docs/app/getting-started/server-and-client-components |
+| shadcn component | https://ui.shadcn.com/docs/components/radix/[component]                  |
+| Tailwind v4      | https://tailwindcss.com/docs                                             |

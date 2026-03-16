@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react"
+import { Download, Github, Linkedin } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -35,6 +35,18 @@ export function Footer() {
           >
             <Github className="size-5" aria-hidden />
             GitHub
+          </a>
+          <a
+            href="/resume_morgan_doane.pdf"
+            download="resume_morgan_doane.pdf"
+            aria-label="Download resume"
+            className={cn(
+              "inline-flex items-center gap-2 text-muted-foreground",
+              "transition-colors hover:text-foreground"
+            )}
+          >
+            <Download className="size-5" aria-hidden />
+            Resume
           </a>
         </nav>
         <div className="flex items-center gap-4">
