@@ -61,6 +61,15 @@ export const projects: Project[] = [
     image: "/conveyors/cookies.webp",
     tags: ["Manufacturing", "Hardware", "Software", "Automation"],
   },
+  {
+    slug: "gchair",
+    title: "G Chair",
+    description:
+      "Personal project: a wooden armchair designed and built from scratch.",
+    category: "Personal",
+    image: "/gchair/hero.jpg",
+    tags: ["Solidworks", "Woodworking", "Sewing"],
+  },
 ]
 
 /** All unique tags across projects, sorted alphabetically */

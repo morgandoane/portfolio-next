@@ -1,4 +1,5 @@
 import { ProjectImage } from "./project-image"
+import { cn } from "@/lib/utils"
 
 export type HeroMeta = {
   label: string
@@ -9,9 +10,16 @@ type ProjectHeroProps = {
   headline: string
   meta: HeroMeta[]
   heroImage: { src: string; alt: string }
+  /** Override the image container aspect ratio. Default is aspect-video (16:9). Use aspect-[4/5] or aspect-[3/4] for taller. */
+  imageAspect?: string
 }
 
-export function ProjectHero({ headline, meta, heroImage }: ProjectHeroProps) {
+export function ProjectHero({
+  headline,
+  meta,
+  heroImage,
+  imageAspect = "aspect-video",
+}: ProjectHeroProps) {
   return (
     <section className="flex flex-col gap-6 px-6 pb-16 sm:px-8">
       <h2 className="mx-auto mt-16 max-w-3xl text-center text-4xl font-medium sm:text-5xl">
@@ -24,7 +32,12 @@ export function ProjectHero({ headline, meta, heroImage }: ProjectHeroProps) {
           </span>
         ))}
       </div>
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-accent dark:bg-card">
+      <div
+        className={cn(
+          "relative w-full overflow-hidden rounded-lg bg-accent dark:bg-card",
+          imageAspect
+        )}
+      >
         <ProjectImage
           src={heroImage.src}
           alt={heroImage.alt}

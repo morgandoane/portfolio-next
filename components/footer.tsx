@@ -5,9 +5,9 @@ import { ThemeToggle } from "@/components/theme-toggle"
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 border-x border-border px-6 py-6 sm:px-12">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 border-x border-border px-6 py-6 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-between sm:gap-4 sm:px-12">
         <nav
-          className="flex flex-wrap items-center gap-6 text-base"
+          className="flex flex-wrap items-center justify-center gap-6 text-base sm:justify-start"
           aria-label="Social links"
         >
           <a
@@ -49,14 +49,14 @@ export function Footer() {
             Resume
           </a>
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4">
           <ThemeToggle />
           <a
             href="mailto:morgan_doane@mde.harvard.edu"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "text-base text-muted-foreground",
+              "text-center text-base text-muted-foreground break-all sm:text-left",
               "transition-colors hover:text-foreground"
             )}
           >
