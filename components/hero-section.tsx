@@ -40,11 +40,12 @@ export function HeroSection() {
 
         {/* Main heading and CTAs */}
         <div className="flex flex-col gap-4">
-          <h1 className="text-2xl leading-tight font-semibold sm:text-4xl md:text-5xl">
-            <span className="block sm:inline">I&apos;m Morgan Doane, a</span>
-            <span className="block whitespace-nowrap sm:inline sm:whitespace-normal">
-              <AnimatedWord cycleTrigger={cycleTrigger} /> who <br className="hidden sm:block" />
-              builds products from 0-1.
+          <h1 className="text-3xl leading-tight font-semibold sm:text-4xl md:text-5xl">
+            <span className="inline">I&apos;m Morgan Doane, a </span>
+            <span className="inline whitespace-nowrap sm:whitespace-normal">
+              <AnimatedWord cycleTrigger={cycleTrigger} />
+              <br />
+              who builds products from 0-1.
             </span>
           </h1>
 

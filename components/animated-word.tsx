@@ -67,7 +67,7 @@ export function AnimatedWord({ cycleTrigger = 0 }: AnimatedWordProps) {
 
   return (
     <span
-      className="relative -mb-1.5 ml-0 inline-block overflow-hidden align-baseline transition-[width] duration-500 ease-out sm:-mb-3 sm:ml-3"
+      className="relative -mb-2 ml-0 inline-block overflow-hidden align-baseline transition-[width] duration-500 ease-out sm:-mb-2.75 sm:ml-3"
       style={{ width: width ?? undefined }}
     >
       {/* Hidden span for measuring intrinsic width */}
