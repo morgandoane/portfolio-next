@@ -8,9 +8,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
+import { isValidEmail } from "@/lib/validation"
 
 const MAX_MESSAGE_LENGTH = 2000
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 type FormState = "idle" | "submitting" | "success" | "error"
 
@@ -25,7 +25,7 @@ export function ContactForm() {
     if (!name.trim() || !email.trim() || !message.trim()) {
       return "All fields are required."
     }
-    if (!EMAIL_REGEX.test(email.trim())) {
+    if (!isValidEmail(email.trim())) {
       return "Please enter a valid email address."
     }
     if (message.length > MAX_MESSAGE_LENGTH) {
