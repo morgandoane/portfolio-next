@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
 import { Client } from "@notionhq/client"
 import { rateLimit } from "@/lib/rate-limit"
+import { isValidEmail } from "@/lib/validation"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MAX_MESSAGE_LENGTH = 2000
 
 function getClientIp(request: NextRequest): string {
@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (!EMAIL_REGEX.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json(
         { success: false, error: "Please enter a valid email address." },
         { status: 400 }
